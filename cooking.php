@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <title>Linete</title>
         <link href="style/style.css" type="text/css" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption|Russo+One|Scada|Lobster|Pattaya" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption|Russo+One|Scada|Lobster|Pattaya|Bad+Script|Pacific" rel="stylesheet">
         
 </head>
 <body>
     <?php
         require("header.php");
     ?>
-    <div id="container">
+    <!-- <div id="container"> -->
         <div id="wrapper">
             <div id="cookingPage">
                 <div class="pageName">
                     <h2>Кулинария</h2>
+                </div>
+                <div class="cookingTopButtons">
                     <div class="cookingList">
                         <a href="#">
                             <span></span>
@@ -60,18 +62,38 @@
                             <span></span>
                             Десерты
                         </a>
-                    </div>                    
+                    </div>
                 </div>
-                <div class="sideBar">Список</div>
-                <div class="mainRecipe">Рецепт</div>
-            </div>
-        </div>
-    </div>
+                <div class="sideBar">
+                    <div class="sideBar__title">
+                        <h1>Закуски</h1>
+                    </div>
+                    <div class="sideBar__list">
+                        <div class="sideBar__listItem">
+                            <ul>
+                                <li>Some taste recipedddd ddddddddfgdfdfd ddddddddddddd dddd</li>
+                                <li>Some taste</li>
+                                <li>Some taste recipeddddddd dddddddd ddddd ddddd ddsfgsdfgdddd</li>
+                                <li>Some taste recipedddddd dddddddddddd dddddddddddd</li>
+                                <li>S</li>
+                            </ul>
+                        </div>
+                    </div>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/script.js"></script>
-<?php
-    require("footer.php");
-?>
+                </div>
+                <div class="mainRecipe">
+                    <div class="mainRecipe__title">Название Рецепта</div>
+                    <div class="mainRecipe__img"><img src="images/1.jpg" alt="Recipie"></div>
+                    <div class="mainRecipe__text"></div>
+                </div>
+            </div>
+
+        </div>
+    <!-- </div> -->
+    <?php
+        require("footer.php");
+    ?>
+  
+
 </body>
 </html>

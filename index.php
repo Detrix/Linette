@@ -11,7 +11,6 @@
     <?php
         require("header.php");
     ?>
-    <div id="container">
         <div id="wrapper">
             <div id="main_menu">
                 <a id="photo1" href="cooking.php">
@@ -65,13 +64,13 @@
 
                 <!--End Main Menu-->
             </div>
-        </div>
-    </div>
 
+        </div>
+        <?php
+            require("footer.php");
+        ?>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/script.js"></script>
-<?php
-    require("footer.php");
-?>
+
 </body>
 </html>
