@@ -83,8 +83,9 @@
                 </div>
                 <div class="mainRecipe">
                     <div class="mainRecipe__title">Название Рецепта</div>
-                    <div class="mainRecipe__img"><img src="images/1.jpg" alt="Recipie"></div>
-                    <div class="mainRecipe__text"></div>
+                    <div class="mainRecipe__img"></div>
+                    <div class="mainRecipe__text"><p>sadsasadsasadsasadsasadsa sadsa sadsa
+                    sadsa sadsasadsasadsasadsasadsasadsasadsasadsa sadsa sadsa </p></div>
                 </div>
             </div>
 

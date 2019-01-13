@@ -1,8 +1,6 @@
 @import url(reset.css);
 
 body {
-	display: flex;
-	flex-direction: column;
 	height: 100%;
   overflow: auto;
   background: url(../images/bg.jpg) no-repeat center center fixed;
@@ -18,7 +16,8 @@ body {
 *:after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box
+    box-sizing: border-box;
+
 }
 
 nav{
@@ -27,24 +26,22 @@ nav{
 	min-height: 80px;
 	background: rgba(28, 28, 28, 0.85); /*#1C1C1C;*/
 	border-bottom: 1px solid #A64600;
-	box-shadow: 0px 4px 6px #1047A9;
+	box-shadow: 0px 4px 6px #fff;
 	z-index: 999999;
 }
 
 footer {
+	position: fixed;
+	top:auto;
+	bottom: 0;
 	color: #fff;
 	width: 100%;
 	background: rgba(28, 28, 28, 0.9);
 	text-align: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	height: 100%;
-
 }
 
 footer p{
-	padding-top: 5px;
+	padding: 5px;
 }
 
 .logo {
@@ -78,7 +75,9 @@ footer p{
 .topMenu ul li a:hover{
 	color: #A64600;
 	background-color: transparent;
-	text-shadow: 1px 1px 1px black, 4px 4px 6px blue;
+	text-shadow: 1px 1px 1px black, 2px 2px 6px #fff;
+	transition: 0.5s;
+
 }
 
 
@@ -96,7 +95,6 @@ footer p{
 	padding-bottom: 40px;
 	display: grid;
 	grid-template-columns: 25% 25% 25% 25%;
-	grid-template-rows: 50% 50%;
 }
 
 #photo1, #photo2, #photo3, #photo4, #photo5, #photo6, #photo7, #photo8{
@@ -106,6 +104,7 @@ footer p{
 	margin: 5px;
 	text-decoration: none;
 	box-shadow: 2px 7px 10px #000;
+	transition: 0.5s;
 }
 
 #photo1{
@@ -174,6 +173,7 @@ footer p{
     display:block;
     cursor: pointer;
     box-shadow: 1px 1px 2px #000;
+    transition: 0.5s;
 }
 
 #photo1:hover .block,
@@ -196,7 +196,6 @@ footer p{
 @media screen and (min-width: 1400px)  {
 	#main_menu{
 		grid-template-columns: 25% 25% 25% 25%;
-		grid-template-rows: 50% 50%;
 	}
 }
 
@@ -212,7 +211,6 @@ footer p{
 
 	#main_menu{
 		grid-template-columns: 33% 33% 33%;
-		grid-template-rows: 33% 33% 33%;
 	}
 }
 
@@ -226,7 +224,6 @@ footer p{
 	}
 	#main_menu{
 		grid-template-columns: 50% 50%;
-		grid-template-rows: 25% 25% 25% 25%;
 	}
 }
 
@@ -240,7 +237,6 @@ footer p{
 	}
 	#main_menu{
 		grid-template-columns: 100%;
-		grid-template-rows: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
 	}
 }
 
@@ -268,7 +264,6 @@ footer p{
 		}
 		#main_menu{
 			grid-template-columns: 100%;
-			grid-template-rows: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
 		}
 	}	
 
@@ -441,11 +436,20 @@ footer p{
 	text-shadow: 1px 1px 0px #000;
 	margin: 10px 0;
 }
-.mainRecipe__img img{
-	max-width: 100%;
-}
+
 .mainRecipe__img{
-	text-align: center;
+	height: 15vw;
+	background-size:100% 100%;
+	border-radius: 20px;
+	box-shadow: 2px 7px 10px #000;
+	max-width: 40%;
+	background-image: url(../images/1.jpg);
+	margin: 0 auto;
+	
+}
+
+.mainRecipe__text{
+	padding-top: 20px;
 }
 
 /*end cooking*/
