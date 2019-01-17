@@ -5,7 +5,7 @@
     <title>Linete</title>
         <link href="style/style.css" type="text/css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption|Russo+One|Scada|Lobster|Pattaya|Bad+Script|Pacific" rel="stylesheet">
-        
+       
 </head>
 <body>
     <?php
@@ -66,7 +66,7 @@
                 </div>
                 <div class="sideBar">
                     <div class="sideBar__title">
-                        <h1>Закуски</h1>
+                        <h1 id="load">Закуски</h1>
                     </div>
                     <div class="sideBar__list">
                         <div class="sideBar__listItem">
@@ -95,6 +95,7 @@
         require("footer.php");
     ?>
   
-
+    <script type="text/javascript" src="script/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="script/js.js"></script>
 </body>
 </html>

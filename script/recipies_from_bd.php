@@ -6,4 +6,5 @@
 		$rows[] = $row;
 	}
 	echo json_encode($rows, JSON_UNESCAPED_UNICODE);
+
 ?>
