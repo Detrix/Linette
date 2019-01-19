@@ -10,6 +10,8 @@
 <body>
     <?php
         require("header.php");
+        require("script/stat.php");
+
     ?>
         <div id="wrapper">
             <div id="main_menu">

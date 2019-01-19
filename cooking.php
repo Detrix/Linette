@@ -10,6 +10,7 @@
 <body>
     <?php
         require("header.php");
+        require("script/stat.php");
     ?>
     <!-- <div id="container"> -->
         <div id="wrapper">
@@ -19,73 +20,38 @@
                 </div>
                 <div class="cookingTopButtons">
                     <div class="cookingList">
-                        <a href="#">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Закуски
-                        </a>
+                        <p>Салаты</p>
                     </div>
                     <div class="cookingList">
-                        <a href="#">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Салаты
-                        </a>
+                       <p>Закуски</p>
                     </div>
                     <div class="cookingList">
-                        <a href="#">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Первые блюда
-                        </a>
+                        <p>Первые блюда</p>
                     </div>
                     <div class="cookingList">
-                        <a href="#">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Вторые блюда
-                        </a>
+                        <p>Вторые блюда</p>
                     </div>
                     <div class="cookingList">
-                        <a href="#">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Десерты
-                        </a>
+                        <p>Десерты</p>
                     </div>
                 </div>
                 <div class="sideBar">
                     <div class="sideBar__title">
-                        <h1 id="load">Закуски</h1>
+                        <h1></h1>
                     </div>
                     <div class="sideBar__list">
                         <div class="sideBar__listItem">
                             <ul>
-                                <li>Some taste recipedddd ddddddddfgdfdfd ddddddddddddd dddd</li>
-                                <li>Some taste</li>
-                                <li>Some taste recipeddddddd dddddddd ddddd ddddd ddsfgsdfgdddd</li>
-                                <li>Some taste recipedddddd dddddddddddd dddddddddddd</li>
-                                <li>S</li>
+                             <!--js выводит навания рецептов из бд-->
                             </ul>
                         </div>
                     </div>
 
                 </div>
                 <div class="mainRecipe">
-                    <div class="mainRecipe__title">Название Рецепта</div>
+                    <div class="mainRecipe__title"></div>
                     <div class="mainRecipe__img"></div>
-                    <div class="mainRecipe__text"><p>sadsasadsasadsasadsasadsa sadsa sadsa
-                    sadsa sadsasadsasadsasadsasadsasadsasadsasadsa sadsa sadsa </p></div>
+                    <div class="mainRecipe__text"></div>
                 </div>
             </div>
 
