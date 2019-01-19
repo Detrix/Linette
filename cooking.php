@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <title>Linete</title>
         <link href="style/style.css" type="text/css" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption|Russo+One|Scada|Lobster|Pattaya|Bad+Script|Pacific" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption|Neucha|Russo+One|Scada|Lobster|Pattaya|Bad+Script|Pacific" rel="stylesheet">
        
 </head>
 <body>
     <?php
         require("header.php");
         require("script/stat.php");
+        require ("script/connect.php"); 
     ?>
     <!-- <div id="container"> -->
         <div id="wrapper">
@@ -52,6 +53,22 @@
                     <div class="mainRecipe__title"></div>
                     <div class="mainRecipe__img"></div>
                     <div class="mainRecipe__text"></div>
+                    <div class="mainRecipe__comment"><span>Удалось ли Вам блюдо? Напишите коментарий :)</span>
+                        <div class="mainRecipe__commentBlock"></div>
+                        <form class="mainRecipe__commentFrom" action="sendMessage.php" method="post">
+                            <p>Автор:<br> 
+                                <input type="text" id="author" value="Гость">
+                            </p>
+                            <p>Текст сообщения:<br>
+                                <textarea style="resize: none;" rows="5" cols="50" id="message" maxlength="200"></textarea>
+                            </p>
+                            <p id="recipie_id"></p>
+                            <p>
+                                <input type="button" value="Отправить" id="send"> 
+                                <span id="resp"></span>
+                            </p>
+                        </form>
+                    </div>
                 </div>
             </div>
 

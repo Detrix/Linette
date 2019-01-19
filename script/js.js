@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+	//загрузка при старте
 	var recipies;
     $.ajax({
     	url: "script/recipies_from_bd.php",
@@ -18,6 +19,8 @@ $(document).ready(function(){
 				$('.mainRecipe__title').html(recipies[t].title);
 				$('.mainRecipe__img').css('background-image', 'url(' + recipies[t].img + ')');
 				$('.mainRecipe__text').html(recipies[t].text);
+				$('#recipie_id').text(recipies[t].id);
+				getMessage(recipies[t].id);
 
 				$('.sideBar__title h1').html("Салаты");
 
@@ -28,6 +31,8 @@ $(document).ready(function(){
 					}
 				}
 		  })
+
+		  //конец загрузка при старте
 
 
 		  //Выбор категории
@@ -42,9 +47,11 @@ $(document).ready(function(){
 		  			break;
 		  		}
 		  	}
+		  	$('#recipie_id').text(recipies[t].id);
 		  	$('.mainRecipe__title').html(recipies[t].title);
 		  	$('.mainRecipe__img').css('background-image', 'url(' + recipies[t].img + ')');
 		  	$('.mainRecipe__text').html(recipies[t].text);
+		  	getMessage(recipies[t].id);
 		  	
 		  	$('.sideBar__title h1').html(chosenButtonName);
 		  	for(var i=0; i<recipies.length; i++){
@@ -53,7 +60,7 @@ $(document).ready(function(){
 		  		}
 		  	}
 		  }
-
+		  //Конец выбор категории
 		  //выбор рецепта
   function chooseRecipie(event){
   	var chosenRecipie = $(event.target).text();
@@ -62,17 +69,66 @@ $(document).ready(function(){
   			$('.mainRecipe__title').html(recipies[i].title);
 				$('.mainRecipe__img').css('background-image', 'url(' + recipies[i].img + ')');
 				$('.mainRecipe__text').html(recipies[i].text);
+				$('#recipie_id').text(recipies[i].id);
+				getMessage(recipies[i].id);
 				break;
   		}
  		}
 	}
 
-	
-	$('.sideBar__listItem').bind('click', 'li', chooseRecipie); 
-	    
-
-
+	$('.sideBar__listItem').bind('click', 'li', chooseRecipie);
 	$('.cookingList').bind('click', 'p', chooseType);
+	//конец выбор рецепта
+
+	//Отправка комментария
+	  $("#send").click(function(){
+	      var author = $("#author").val();
+	      var recipie_id = $("#recipie_id").text();
+	      var message = $("#message").val();
+	      $.ajax({
+		      type: "POST",
+		      url: "script/messages_send.php",
+		      data: {"author": author, "recipie_id": recipie_id, "message": message},
+		      cache: false,
+		      success: function(response){
+			      var messageResp = new Array('Ваше сообщение отправлено','Сообщение не отправлено Ошибка базы данных','Нельзя отправлять пустые сообщения');
+			      var resultStat = messageResp[Number(response)];
+			      if(response == 0){
+				      $("#author").val(author);
+				      $("#message").val("");
+				      getMessage(recipie_id);
+			    	}
+			      $("#resp").text(resultStat).show().delay(1500).fadeOut(800);
+		    	}
+	    	});
+	      return false;
+	  });
+
+
+	//конец Отправка комментария
+
+	//Вывод комментария
+
+	function getMessage(recipie_id){
+		var messages;
+	    $.ajax({
+	    	url: "script/messages_from_bd.php",
+	    	method: "POST"
+			  }).done(function(data){
+					messages = JSON.parse(data);
+				$('.mainRecipe__commentBlock').empty();
+				for(var i=0; i<messages.length; i++){
+					if (messages[i].recipie_id == recipie_id) {
+						$('.mainRecipe__commentBlock').append('<div class="mainRecipe__singleComment"><p class="commentAuthor">'+messages[i].author+'</p><p class="commentDate">'+messages[i].date+'</p><p class="commentMessage"><div class="clear"></div>'+messages[i].message+'</p></div>');
+					}
+				}
+
+
+					
+			  })
+	}
+
+	//Конец Вывод комментария
 
 
 
