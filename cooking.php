@@ -50,6 +50,7 @@
 
                 </div>
                 <div class="mainRecipe">
+                    <div class="mainRecipe__like"><span>Like Me-></span><img id="recipieLike" src="/images/like.png" alt="like"><label id="likeField" for="like">555</label></div>
                     <div class="mainRecipe__title"></div>
                     <div class="mainRecipe__img"></div>
                     <div class="mainRecipe__text"></div>
@@ -60,11 +61,11 @@
                                 <input type="text" id="author" value="Гость">
                             </p>
                             <p>Текст сообщения:<br>
-                                <textarea style="resize: none;" rows="5" cols="50" id="message" maxlength="200"></textarea>
+                                <textarea style="resize: none;" rows="5" cols="50" id="message" maxlength="500"></textarea>
                             </p>
                             <p id="recipie_id"></p>
                             <p>
-                                <input type="button" value="Отправить" id="send"> 
+                                <input type="button" value="Отправить" id="send" max="50"> 
                                 <span id="resp"></span>
                             </p>
                         </form>
