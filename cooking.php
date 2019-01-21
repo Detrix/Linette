@@ -50,7 +50,7 @@
 
                 </div>
                 <div class="mainRecipe">
-                    <div class="mainRecipe__like"><span>Like Me-></span><img id="recipieLike" src="/images/like.png" alt="like"><label id="likeField" for="like">555</label></div>
+                    <div class="mainRecipe__like"><span>Like Me-></span><img id="recipieLike" src="images/like.png" alt="like"><label id="likeField" for="like">555</label></div>
                     <div class="mainRecipe__title"></div>
                     <div class="mainRecipe__img"></div>
                     <div class="mainRecipe__text"></div>
