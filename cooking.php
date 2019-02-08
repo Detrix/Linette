@@ -1,23 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133659571-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-133659571-1');
+    </script>
+
     <meta charset="UTF-8">
-    <title>Linete</title>
+    <title>Linette - вкусные и простые рецепты | готовить вкусно - просто</title>
         <link href="style/style.css" type="text/css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption|Neucha|Russo+One|Scada|Lobster|Pattaya|Bad+Script|Pacific" rel="stylesheet">
-       
+       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+       <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+           google_ad_client: "ca-pub-6318439533658792",
+           enable_page_level_ads: true
+         });
+       </script>
 </head>
 <body>
     <?php
         require("header.php");
-        require("script/stat.php");
         require ("script/connect.php"); 
+        require("script/stat.php");
     ?>
     <!-- <div id="container"> -->
         <div id="wrapper">
             <div id="cookingPage">
                 <div class="pageName">
-                    <h2>Кулинария</h2>
+                    <h2>Вкусные рецепты</h2>
                 </div>
                 <div class="cookingTopButtons">
                     <div class="cookingList">
@@ -42,7 +58,7 @@
                     </div>
                     <div class="sideBar__list">
                         <div class="sideBar__listItem">
-                            <ul>
+                            <ul class="rounded">
                              <!--js выводит навания рецептов из бд-->
                             </ul>
                         </div>
@@ -50,7 +66,7 @@
 
                 </div>
                 <div class="mainRecipe">
-                    <div class="mainRecipe__like"><span>Like Me-></span><img id="recipieLike" src="images/like.png" alt="like"><label id="likeField" for="like">555</label></div>
+                    <div class="mainRecipe__like"><span>Like Me-></span><img id="recipieLike" src="images/like.png" alt="like"><label id="likeField" for="like">555</label><div id="likeStatus">555</div></div>
                     <div class="mainRecipe__title"></div>
                     <div class="mainRecipe__img"></div>
                     <div class="mainRecipe__text"></div>

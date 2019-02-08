@@ -126,14 +126,11 @@ $(document).ready(function(){
 						$('.mainRecipe__commentBlock').append('<div class="mainRecipe__singleComment"><p class="commentAuthor">'+messages[i].author+'</p><p class="commentDate">'+messages[i].date+'</p><p class="commentMessage"><div class="clear"></div>'+messages[i].message+'</p></div>');
 					}
 				}
-
-
-					
 			  })
 	}
 
 	//Конец Вывод комментария
-	//Отправка лайка
+	//Отправка лайка к рецептам
 	  $("#recipieLike").click(function(){
 	      var recipie_id = $("#recipie_id").text();
 	      $.ajax({
@@ -144,6 +141,11 @@ $(document).ready(function(){
 		      success: function(response){
 			      if(response == 0){
 				      getLikes(recipie_id);
+				      $('#likeStatus').css('color', '#4FAF70');
+				      $("#likeStatus").text("Спасибо, очень приятно! =]").show().delay(1500).fadeOut(800);
+			    	} else {
+			    		$('#likeStatus').css('color', '#CD3153');
+			    		$("#likeStatus").text("Сегодня Вы уже голосовали... =[").show().delay(1500).fadeOut(800);
 			    	}
 		    	}
 	    	});
@@ -151,8 +153,8 @@ $(document).ready(function(){
 	  });
 
 
-	//конец Отправка лайка
-	//Вывод лайка
+	//конец Отправка лайка к рецептам
+	//Вывод лайка рецептов
 
 	function getLikes(recipie_id){
 		var likes;
@@ -175,9 +177,74 @@ $(document).ready(function(){
 			  })
 	}
 
-	//Конец Вывод лайка
+	//Конец Вывод лайка рецептов
+//**********///////////////////////////////
 
 
+	//Отправка лайка к постам
+	  $("#postLike").click(function(){
+	      var postID = $("#postID").text();
+	      var categoryID = $("#categoryID").text();
+	      $.ajax({
+		      type: "POST",
+		      url: "script/post_like_send.php",
+		      data: {"postID": postID, "categoryID": categoryID},
+		      cache: false,
+		      success: function(response){
+			      if(response == 0){
+				      getPostLikes(postID, categoryID);
+				      $('#PostLikeStatus').css('color', '#4FAF70');
+				      $("#PostLikeStatus").text("Спасибо, очень приятно! =]").show().delay(1500).fadeOut(800);
+			    	} else {
+			    		$('#PostLikeStatus').css('color', '#CD3153');
+			    		$("#PostLikeStatus").text("Сегодня Вы уже голосовали... =[").show().delay(1500).fadeOut(800);
+			    	}
+		    	}
+	    	});
+	      return false;
+	  });
+
+
+	//конец Отправка лайка к постам
+	//Вывод лайка постов/ просмотров постов
+	function getPostLikes(postID, categoryID){
+		var likeCount=0;
+	    $.ajax({
+	    	url: "script/post_likes_from_bd.php",
+	    	data: {"postID": postID, "categoryID": categoryID},
+	    	method: "POST"
+			  }).done(function(data){
+					likeCount = data;
+					
+				$('#PostLikeField').empty();
+				$('#PostLikeField').html(likeCount);
+
+					
+			  })
+	}
+	function getPostViews(postID, categoryID){
+		var viewCount=0;
+	    $.ajax({
+	    	url: "script/post_view_from_bd.php",
+	    	data: {"postID": postID, "categoryID": categoryID},
+	    	method: "POST"
+			  }).done(function(data){
+					viewCount = data;
+					
+				$('#PostViewsField').empty();
+				$('#PostViewsField').html(viewCount);
+
+					
+			  })
+	}
+
+	var postID = $("#postID").text();
+	var categoryID = $("#categoryID").text();
+	getPostLikes(postID, categoryID);
+	getPostViews(postID, categoryID);
+
+	//Конец Вывод лайка постов/ просмотров постов
+	
 
 });
 
