@@ -13,10 +13,15 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Linette - женский досуг | секреты успешной женщины</title>
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption|Russo+One|Scada" rel="stylesheet">
+
         <link href="style/bootstrap.min.css" type="text/css" rel="stylesheet" />
         <link href="style/bootstrap-grid.min.css" type="text/css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption|Russo+One|Scada" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
         <link href="style/style.css" type="text/css" rel="stylesheet" />
+
         
 
        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -31,7 +36,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark myNav ">
   <a href="index.php" class="navbar-brand">
-    <img src="images/logo.png" alt="Linette" title="Linette" width="200px">
+    <img src="images/logo.png" alt="Linette" title="Linette" width="200px" height=>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" 
   data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -59,7 +64,7 @@
         <a href="sport.php" class="nav-link">Спорт</a>
       </li> 
       <li class="nav-item" active>
-        <a href="animals.php" class="nav-link">Домашние питомцы</a>
+        <a href="animals.php" class="nav-link">Животные</a>
       </li> 
       <li class="nav-item" active>
         <a href="psychologies.php" class="nav-link">Психология</a>
