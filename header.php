@@ -1,18 +1,72 @@
-<nav>
-    <a class="logo" href="index.php">
-        <img src="images/logo.png" alt="Linette" title="Linette">
-    </a>
-    <div class="topMenu">
-        <ul>
-          <li><a href="index.php"><span>Главная</span></a></li>
-          <li><a href="cooking.php"><span>Кулинария</span></a></li>
-          <li><a href="music.php"><span>Музыка</span></a></li>
-          <li><a href="beauty.php"><span>Красота</span></a></li>
-          <li><a href="formoms.php"><span>Мамочкам</span></a></li>
-          <li><a href="sport.php"><span>Спорт</span></a></li>
-          <li><a href="animals.php"><span>Домашние питомцы</span></a></li>
-          <li><a href="psychologies.php"><span>Психология</span></a></li>
-          <li><a href="health.php"><span>Здоровье</span></a></li>
-        </ul>
-    </div>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133659571-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-133659571-1');
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Linette - женский досуг | секреты успешной женщины</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption|Russo+One|Scada" rel="stylesheet">
+        <link href="style/bootstrap.min.css" type="text/css" rel="stylesheet" />
+        <link href="style/bootstrap-grid.min.css" type="text/css" rel="stylesheet" />
+        <link href="style/style.css" type="text/css" rel="stylesheet" />
+        
+
+       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+       <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+           google_ad_client: "ca-pub-6318439533658792",
+           enable_page_level_ads: true
+         });
+       </script> 
+       <meta name="google-site-verification" content="m5H0oVN5O1eq2PVg7r6_bA6ovX_noyf-MODYTlWiy2w" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark myNav ">
+  <a href="index.php" class="navbar-brand">
+    <img src="images/logo.png" alt="Linette" title="Linette" width="200px">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" 
+  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+  aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" active>
+        <a href="index.php" class="nav-link">Главная</a>
+      </li> 
+      <li class="nav-item" active>
+        <a href="cooking.php" class="nav-link">Кулинария</a>
+      </li> 
+      <li class="nav-item" active>
+        <a href="music.php" class="nav-link">Музыка</a>
+      </li> 
+      <li class="nav-item" active>
+        <a href="beauty.php" class="nav-link">Красота</a>
+      </li> 
+      <li class="nav-item" active>
+        <a href="formoms.php" class="nav-link">Мамочкам</a>
+      </li> 
+      <li class="nav-item" active>
+        <a href="sport.php" class="nav-link">Спорт</a>
+      </li> 
+      <li class="nav-item" active>
+        <a href="animals.php" class="nav-link">Домашние питомцы</a>
+      </li> 
+      <li class="nav-item" active>
+        <a href="psychologies.php" class="nav-link">Психология</a>
+      </li> 
+      <li class="nav-item" active>
+        <a href="health.php" class="nav-link">Здоровье</a>
+      </li> 
+    </ul>
+  </div>
 </nav>

@@ -20,15 +20,28 @@ body {
 
 }
 
-nav{
+.myNav{
 	position: fixed;
 	width: 100%;
 	min-height: 80px;
-	background: rgba(28, 28, 28, 0.85); /*#1C1C1C;*/
-	border-bottom: 1px solid #A64600;
 	box-shadow: 0px 4px 6px #fff;
 	z-index: 999999;
 }
+
+.navbar-nav{
+font-size: 16px;
+font-family: 'Bad Script', cursive;
+letter-spacing: inherit;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: #f4f4f4;
+}
+.navbar-dark .navbar-nav .nav-link:focus, 
+.navbar-dark .navbar-nav .nav-link:hover {
+ color: #909090;
+}
+
 
 footer {
 	position: fixed;
@@ -44,42 +57,20 @@ footer p{
 	padding: 5px;
 }
 
-.logo {
-	margin: 0 10px;
-	padding: 5px;
-	float: left;
+.img{
+    position: relative;
+    width:100%;
+    height:400px;
 }
 
-.topMenu{
-	position: relative;
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
+.img img{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    max-width:100%;
+    max-height: 100%;
 }
-
-.topMenu ul li{
-	display: inline-block;
-	float: left;
-}
-.topMenu ul li a{
-	color: #a6dcf4;
-	text-decoration: none;
-	font-weight: bold;
-	display: inline-block;
-	padding: 20px 15px 15px 15px;
-	line-height: 40px;
-	font-size: 20px;
-	font-family: 'Scada', sans-serif;
-	letter-spacing: inherit;
-}
-.topMenu ul li a:hover{
-	color: #ffc69ce6;
-	background-color: transparent;
-	text-shadow: -1px 2px 0px black, 0px 2px 2px #fff;
-	transition: 0.5s;
-
-}
-
 
 #wrapper{
 	flex: 1 0 auto;
@@ -304,7 +295,7 @@ footer p{
 	margin-bottom: 50px;
 }
 
-.cookingList{
+.cookingList, .backButton{
 	padding: 0 100px;
 	margin-right: 10px;
 	border-radius: 20px;
@@ -314,11 +305,11 @@ footer p{
 }
 
 /*start cooking top button*/
-.cookingList p {
-  position: absolute;
+.cookingList p, .backButton p{
+
   height: 50px;
   width: 100%;
-  transform: translate(-50%, -50%);
+
   text-align: center;
   text-decoration: none;
   font-size: 26px;
@@ -330,7 +321,7 @@ footer p{
   border-radius: 20px;
   box-shadow: 2px 7px 10px #000;
 }
-.cookingList p:hover {
+.cookingList p:hover, .backButton p:hover{
 	cursor: pointer;
   color: #000;
   text-shadow: 1px 2px 3px #fff;
@@ -338,6 +329,12 @@ footer p{
   background: rgba(39, 91, 169, 0.7);
   transition: 0.5s;
  
+}
+
+.cookingList p{
+	position: absolute;
+	transform: translate(-50%, -50%);
+
 }
 
 /* end cooking top button*/
@@ -855,6 +852,7 @@ text-align: right;
 }
 
 /*end single_Post*/
+
 
 .clear{
 	clear: both;

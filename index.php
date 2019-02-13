@@ -1,30 +1,3 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133659571-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-133659571-1');
-    </script>
-
-    <meta charset="UTF-8">
-    <title>Linette - женский досуг | секреты успешной женщины</title>
-        <link href="style/style.css" type="text/css" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption|Russo+One|Scada" rel="stylesheet">
-       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-       <script>
-         (adsbygoogle = window.adsbygoogle || []).push({
-           google_ad_client: "ca-pub-6318439533658792",
-           enable_page_level_ads: true
-         });
-       </script> 
-       <meta name="google-site-verification" content="m5H0oVN5O1eq2PVg7r6_bA6ovX_noyf-MODYTlWiy2w" />
-</head>
-<body>
     <?php
     require("header.php");
     require ("script/connect.php"); 
@@ -89,8 +62,3 @@
         <?php
             require("footer.php");
         ?>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/js.js"></script>
-
-</body>
-</html>

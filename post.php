@@ -1,31 +1,3 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133659571-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-133659571-1');
-    </script>
-
-    <meta charset="UTF-8">
-    <title>Linette - секреты красоты | женские хитрости крастоты</title>
-        <link href="style/style.css" type="text/css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption|Neucha|Russo+One|Scada|Lobster|Amatic+SC|Bad+Script|Pacific" rel="stylesheet">
-       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-       <script>
-         (adsbygoogle = window.adsbygoogle || []).push({
-           google_ad_client: "ca-pub-6318439533658792",
-           enable_page_level_ads: true
-         });
-       </script>
-</head>
-<body>
     <?php
         require("header.php");
         require ("script/connect.php"); 
@@ -57,8 +29,6 @@
             case 'psychologies':
                 $table = 'psychologies';
                 break;
-            
-            
             default:
                 echo "<script>history.back();</script>";
                 break;
@@ -74,10 +44,15 @@
         if(($post['id']-1)<=0){
             $prev = 0;
             $next = 1;
-        } else if(($post['id']+1)>getPostsCounts($table)){
+        } 
+        if(($post['id']+1)>getPostsCounts($table)){
             $next = 0;
             $prev = 1;
         } 
+        if(($post['id']<=1) && getPostsCounts($table)<=1){
+            $next = 0;
+            $prev = 0;
+        }
         require("script/post_view_pluse.php"); //добавляем просмотры поста
     ?>
         <div id="wrapper">
@@ -123,9 +98,3 @@
     <?php
         require("footer.php");
     ?>
-
-    <script type="text/javascript" src="script/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="script/js.js"></script>
-
-</body>
-</html>
